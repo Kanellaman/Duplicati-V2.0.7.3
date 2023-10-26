@@ -42,9 +42,9 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
         if (includeUserPassword == null) {
             includeUserPassword = true;
         }
-        scope.AdvancedOptions.splice(0, scope.AdvancedOptions.length)
-        scope.AdvancedOptions.push('--ssh-key');
-        scope.AdvancedOptions.push('--ssh-accept-any-fingerprints');
+        scope.AdvancedOptions.splice(0, scope.AdvancedOptions.length)   // Clear Array of Advanced Options
+        scope.AdvancedOptions.push('--ssh-key=key');   // Change the path so that it locates the key
+        scope.AdvancedOptions.push('--ssh-accept-any-fingerprints=');   // Disable host-key fingerprint verification.
 
         // Some backends do not have input fields for Username and Password
         // When changing backends, these variables are not cleared
