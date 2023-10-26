@@ -8,14 +8,16 @@
 
 3. Zip all the files contained on the folder
 
-4. Download Duplicati files from [here](https://gitlab.com/KanellakisK/duplicati) or [here](https://github.com/Kanellaman/duplicati)
+4. Fill the credentials needed for the Host server in the file [EditUriBackendConfig.js](webroot\ngax\scripts\services\EditUriBackendConfig.js)
 
-5. Store the zipped folder (from step 3) in the Duplicati folder downloaded in step 4 to the path ...\Installer\Windows
+5. Download Duplicati files from [here](https://gitlab.com/KanellakisK/duplicati) or [here](https://github.com/Kanellaman/duplicati)
 
-6. Run
+6. Store the zipped folder (from step 3) in the Duplicati folder downloaded in step 4 to the path ...\Installer\Windows
+
+7. Run
    `$...\duplicati\Installer\Windows:> artifact_win Files.zip`
 
-7. Run the executable created and follow the instructions of the Installer</br>
+8. Run the executable created and follow the instructions of the Installer</br>
 
 ## Notes
 
