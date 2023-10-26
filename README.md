@@ -2,7 +2,7 @@
 
 # Instructions to build
 
-1. Download the files of this repo</br>
+1. Download the files of this repo [here](https://gitlab.com/KanellakisK/Duplicati-V2-0-7-3)
 
 2. Change the contents of the `key` and store your private key (copy-paste the private key to file)
 
