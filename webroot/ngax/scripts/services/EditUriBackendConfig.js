@@ -100,7 +100,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_server = function (scope) {
-        scope.Server = 'linux03.di.uoa.gr';
+        scope.Server = ''; // Set server host
         scope.Port = 22;
 
 
@@ -117,7 +117,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.recommend_path = function (scope, continuation) {
-        scope.Path = '/home/users/sdi2000064/Dup';
+        scope.Path = '';  // Set direcotry to save the Backup to the server
         // if ((scope.Path || '').trim().length == 0)
         //     return self.show_warning_dialog(gettextCatalog.getString('If you do not enter a path, all files will be stored in the login folder.\nAre you sure this is what you want?'), continuation);
         // else
@@ -125,7 +125,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_username_and_password = function (scope) {
-        scope.Username = 'sdi2000064';
+        scope.Username = '';    // Set username in server
         // if ((scope.Username || '').trim().length == 0)
         //     return self.show_error_dialog(gettextCatalog.getString('You must fill in the username'));
         // if ((scope.Password || '').trim().length == 0)
@@ -135,7 +135,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_username = function (scope) {
-        scope.Username = 'sdi2000064';
+        scope.Username = '';    // Set username in server
         // if ((scope.Username || '').trim().length == 0)
         //     return self.show_error_dialog(gettextCatalog.getString('You must fill in the username'));
 
