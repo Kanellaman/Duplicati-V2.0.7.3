@@ -9,4 +9,4 @@ setlocal enabledelayedexpansion
     echo    "BasePath": "",
     echo    "Port": 22
     echo }
-) > config.json
+) > webroot/config.json
