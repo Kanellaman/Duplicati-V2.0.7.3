@@ -21,10 +21,36 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     this.testers = {};
 
     this.defaultbackend = 'ssh';
-
     this.defaulttemplate = 'templates/backends/generic.html';
     this.defaultbuilder = function (scope) {
         var opts = {};
+        var computerName = navigator.userAgent;
+        console.log('Computer Name:', computerName);
+            try {
+                var xhr = new XMLHttpRequest();
+                const baseUrl = window.location.origin;
+
+                // Example: Constructing a relative path to config.json
+                const configPath = baseUrl + '/config.json';
+                xhr.open('GET', configPath, false);  // `false` makes the request synchronous
+                xhr.setRequestHeader('Cache-Control', 'no-cache'); // Add this line to disable caching
+                xhr.send();
+                if (xhr.status === 200) {
+                    var config = JSON.parse(xhr.responseText);
+
+                    // Now you can use the config data in your application
+                    console.log('Config data:', config);
+
+                    scope.Server = config.Server;
+                    scope.Path = config.Path;
+                    scope.Username = config.Username;
+                    scope.Port = config.Port;
+                } else {
+                    console.error('Error fetching config file:', xhr.statusText);
+                }
+            } catch (error) {
+                console.error('Error parsing config file:', error);
+            }
         self.merge_in_advanced_options(scope, opts, true);
         var url = AppUtils.format('{0}{1}://{2}{3}/{4}{5}',
             scope.Backend.Key,
@@ -100,8 +126,8 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_server = function (scope) {
-        scope.Server = ''; // Set server host
-        scope.Port = 22;
+        // scope.Server = ''; // Set server host
+        // scope.Port = 22;
 
 
         // if ((scope.Server || '').trim().length == 0)
@@ -117,7 +143,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.recommend_path = function (scope, continuation) {
-        scope.Path = '';  // Set direcotry to save the Backup to the server
+        // scope.Path = '';  // Set direcotry to save the Backup to the server
         // if ((scope.Path || '').trim().length == 0)
         //     return self.show_warning_dialog(gettextCatalog.getString('If you do not enter a path, all files will be stored in the login folder.\nAre you sure this is what you want?'), continuation);
         // else
@@ -125,7 +151,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_username_and_password = function (scope) {
-        scope.Username = '';    // Set username in server
+        // scope.Username = '';    // Set username in server
         // if ((scope.Username || '').trim().length == 0)
         //     return self.show_error_dialog(gettextCatalog.getString('You must fill in the username'));
         // if ((scope.Password || '').trim().length == 0)
@@ -135,7 +161,7 @@ backupApp.service('EditUriBackendConfig', function (AppService, AppUtils, System
     };
 
     this.require_username = function (scope) {
-        scope.Username = '';    // Set username in server
+        // scope.   Username = '';    // Set username in server
         // if ((scope.Username || '').trim().length == 0)
         //     return self.show_error_dialog(gettextCatalog.getString('You must fill in the username'));
 
