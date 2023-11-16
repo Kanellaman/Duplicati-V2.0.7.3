@@ -157,7 +157,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="box filters">
+                <!-- <div class="box filters">
                     <div class="headerthreedotmenu">
                         <a href ng-click="showFilter = !showFilter" class="expandable">
                             <h2 translate>Filters</h2>
@@ -183,7 +183,6 @@
 
                     <div ng-show="showFilter">
                         <div class="input textarea" ng-show="EditFilterAdvanced">
-                            <!--<label for="FilterList">Filters <span class="info">i</span></label>-->
                             <textarea id="FilterList" string-array-as-text ng-model="Backup.Filters" ng-model-options="{updateOn: 'blur'}"></textarea>
                         </div>
                         <div class="input textarea" ng-hide="EditFilterAdvanced">
@@ -241,7 +240,7 @@
                             </select>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="buttons">
                     <input class="submit next" type="button" id="nextStep3" ng-click="nextPage()" value="{{'Next' | translate}} &gt;" />
                     <input class="submit prev" type="button" id="prevStep3" ng-click="prevPage()" value="&lt; {{'Previous' | translate}}" />
