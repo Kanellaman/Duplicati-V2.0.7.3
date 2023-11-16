@@ -4,7 +4,6 @@ backupApp.controller('AddWizardController', function($scope, $location, EditUriB
     };
     $scope.nextPage = function() {
         $scope.backups = BackupList.watch($scope);
-        console.log($scope.backups.length)
         if ($scope.selection.style == 'blank')
         {
             if($scope.backups.length === 0)
