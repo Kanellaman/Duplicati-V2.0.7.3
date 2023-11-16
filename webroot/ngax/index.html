@@ -148,17 +148,17 @@
                 </div>
             </div>
 
-            <div class="donate" ng-hide="systemInfo.SuppressDonationMessages">
+            <!-- <div class="donate" ng-hide="systemInfo.SuppressDonationMessages">
                 <external-link link="'https://www.duplicati.com/donate'">{{'Donate' | translate }}</external-link>
-            </div>
+            </div> -->
 
 
             <a href class="menubutton hidden" data-target="mainmenu" translate>Menu</a>
 
-            <div class="action-icons-small">
+            <!-- <div class="action-icons-small">
                 <div class="pause" ng-class="{'active': state.programState != 'Running'}" ng-click="pauseOptions()" title="{{state.programState == 'Running' ? 'Click to see the pause options' : 'Click to resume'}}"></div>
                 <div class="throttle {{throttle_active ? 'active' : 'inactive'}}" ng-click="throttleOptions()" title="{{'Click to set throttle options' | translate}}" alt="{{'Click to set throttle options' | translate}}"></div>
-            </div>
+            </div> -->
 
             <div class="statepadding">
                 <div class="state" ng-controller="StateController">
@@ -206,10 +206,10 @@
 
                 </div>
 
-                <div class="action-icons">
+                <!-- <div class="action-icons">
                     <div class="pause" ng-class="{'active': state.programState != 'Running'}" ng-click="pauseOptions()" title="{{state.programState == 'Running' ? 'Click to see the pause options' : 'Click to resume'}}"></div>
                     <div class="throttle {{throttle_active ? 'active' : 'inactive'}}" ng-click="throttleOptions()" title="{{'Click to set throttle options' | translate}}" alt="{{'Click to set throttle options' | translate}}"></div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -228,9 +228,9 @@
                     <li ng-hide="state.programState == 'Running'">
                         <a href ng-click="resume()" id="resume" class="resume" translate>Resume</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#/settings" class="settings" ng-class="{active: current_page == 'settings'}" translate>Settings</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#/about" class="about" ng-class="{active: current_page == 'about'}" translate>About</a>
                     </li>
@@ -253,7 +253,7 @@
                 </ul>
             </div>
 
-            <div class="donate">
+            <!-- <div class="donate">
                 <ul>
                     <li ng-hide="systemInfo.SuppressDonationMessages">
                         <external-link link="'https://www.duplicati.com/donate'">{{'Donate' | translate}}</external-link>
@@ -269,14 +269,14 @@
                     <li>
                         <a href="https://github.com/duplicati" target="_blank" rel="external"><img src="img/social/github.png" srcset="img/social/github.png 1x, img/social/github_2x.png 2x, img/social/github_3x.png 3x" alt="Github" title="Github" /></a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="http://www.duplicati.com" target="_blank" rel="external"><img src="img/social/duplicati.png" srcset="img/social/duplicati.png 1x, img/social/duplicati_2x.png 2x, img/social/duplicati_3x.png 3x" alt="{{'Duplicati Website' | translate}}" title="{{'Duplicati Website' | translate}}" /></a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
             <div class="themelink">
                 <a href="https://duplicati.readthedocs.io/en/latest/" target="_blank" rel="external">{{'Manual' | translate}}<div class="external-link-image"></div></a>
-            </div>
+            </div> -->
         </div>
     </div>
 
